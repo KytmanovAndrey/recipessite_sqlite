@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ recipe.name }}{% endblock %}
+
+{% block content %}
+    <main class="main">
+            <section class="main-content container">
+                <div class="content">
+                    <h3>{{ recipe.name }}</h3>
+                    <p>{{ recipe.description }}</p>
+                    <p>Шаги приготовления: {{ recipe.cooking_steps }}</p>
+                    <p>Время приготовления: {{ recipe.cooking_time }} минут</p>
+                    <p>Состав: {{ recipe.ingredients }}</p>
+                    <p><img src="{{ recipe.image.url }}" alt="recipe picture"></p>
+                    <p>Автор: {{ recipe.author }}</p>
+                    <p>Оценка: {{ recipe.rating }}</p>
+                    <p>Дата создания: {{ recipe.create_date }}</p>
+                    <a href="{% url 'update_recipe' recipe.id %}"><button type="button">Редактировать рецепт</button></a>
+                </div>
+            </section>
+    </main>
+{% endblock %}

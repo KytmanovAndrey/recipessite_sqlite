@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Добавление рецепта{% endblock %}
+
+{% block content %}
+    <main class="main">
+            <section class="main-content container">
+                <div class="content">
+                    <h2>Введите данные рецепта</h2>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit">Опубликовать рецепт</button>
+                    </form>
+                </div>
+            </section>
+    </main>
+{% endblock %}

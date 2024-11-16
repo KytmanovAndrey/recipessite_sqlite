@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+    <main class="main">
+            <section class="main-content container">
+                <div class="content">
+                    <h1 class="content-title">5 случайных рецептов</h1>
+                    {% for recipe in recipes %}
+                        <a href="{% url 'show_recipe' recipe.id %}"><img class="content-img" src="{{ recipe.image.url }}" alt="recipe picture"></a>
+                        <a href="{% url 'show_recipe' recipe.id %}"><p class="content-text">{{ recipe.name }}, {{ recipe.cooking_time }} минут</p></a>
+                    {% endfor %}
+                </div>
+            </section>
+    </main>
+{% endblock %}

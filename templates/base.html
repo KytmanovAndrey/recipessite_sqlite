@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>
+        {% block title %}
+        Сайт рецептов
+        {% endblock %}
+    </title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navigation container">
+            <a class="nav-logo" href="#"><img src="{% static './img/logo1.png' %}" alt="navigation logo"></a>
+            <div class="navigation2 container">
+                <a class="nav-link" href="{% url 'show_random_recipes' %}" style="color:#F25822">Главная</a>
+                <a class="nav-link" href="{% url 'recipe_add_form' %}">Добавить репепт</a>
+                <a class="nav-link" href="{% url 'registration_view' %}">Регистрация</a>
+                <a class="nav-link" href="{% url 'login_view' %}">Логин</a>
+                <a class="nav-link" href="{% url 'logout_view' %}">Выход({{ request.user }})</a>
+            </div>
+        </nav>
+    </header>
+    {% block content %}
+        {% if text %}
+            <main class="main">
+                <section class="main-content container">
+                    <div class="content">
+                        <p class="content-text">{{ text }}</p>
+                    </div>
+                </section>
+            </main>
+        {% endif %}
+    {% endblock %}
+    <footer class="footer">
+        <nav class="logos container">
+            <a href="#"><img src="{% static './img/logo2.png' %}" alt="logo"></a>
+            <a href="#"><img src="{% static './img/logo3_6.png' %}" alt="logo"></a>
+            <a href="#"><img src="{% static './img/logo4.png' %}" alt="logo"></a>
+            <a href="#"><img src="{% static './img/logo5.png' %}" alt="logo"></a>
+            <a href="#"><img src="{% static './img/logo3_6.png' %}" alt="logo"></a>
+        </nav>
+    </footer>
+</body>
+</html>

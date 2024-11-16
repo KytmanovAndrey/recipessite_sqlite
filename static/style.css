@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+p {
+    margin: 20px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    color: green;
+    font-size: 20px;
+    /* outline: none; */
+}
+
+.container {
+    max-width: 1172px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 40px 0 84px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.navigation2 {
+    margin-right: 0;
+    max-width: 633px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-logo {
+}
+.nav-link {
+    font-family: "Georgia", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+}
+
+.main {
+    margin-bottom: 162px;
+}
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.content {
+    max-width: 1522px;
+}
+.content-img {
+    max-width: 522px;
+}
+.content-title {
+    font-family: "Georgia";
+    font-weight: 400;
+    font-size: 60px;
+    color: #000;
+
+    margin-bottom: 17px;
+}
+.content-text {
+    font-family: "Georgia";
+    font-weight: 400;
+    font-size: 20px;
+    color: #000;
+
+    margin-bottom: 37px;
+    max-width: 466px;
+}
+
+.footer {
+    padding: 97px 0 96px;
+}
+.logos {
+    display: flex;
+    justify-content: space-between;
+}
